@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="296676249704-ng73gd24107iplg3of4s3qj05abq2dbs.apps.googleusercontent.com">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="style.css" />
-
-
-    <title>JS Google Login</title>
-  </head>
-  <body>
-    <h2 class="alert alert-primary">Sign in with Google</h2>
-    <div class="g-signin2" data-onsuccess="OnSignIn();"></div>
-    <div class="data">
-        <p>Name</p>
-        <p id="alert alert-success"></p>
-
-        <p>Profile Pic</p>
-        <img width="100" height="100" id="image" class="rounded-circle">
-        <p>Email</p>
-        <p id="email"></p>
-        <button type="button" class="btn btn-danger" onclick="signOut();">SignOut</button>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Google Login</title>
+</head>
+<body>
+<div class="container d-flex flex-column align-items-center justify-content-center vh-100 text-center">
+    <h2 class="animated-title">Sign in with Google</h2>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="data animated-data">
+        <div class="alert alert-success p-3 user-info">
+            <h4 id="name"></h4>
+            <p id="email"></p>
+        </div>
+        <img id="image" class="rounded-circle mb-3 profile-pic" width="100" height="100" alt="Profile Picture">
+        <button type="button" class="btn btn-danger logout-btn" onclick="signOut()">Sign Out</button>
     </div>
+</div>
 
-    <script src="script.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  </body>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
 </html>
