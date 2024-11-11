@@ -1,13 +1,100 @@
-
-
-.data{
-    display: none;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.g-signin2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left:-50px;
-} ;
+body, html {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+}
+
+/* Container Styling */
+.container {
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title Animation */
+.animated-title {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: slideDown 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Data Section Animation */
+.data {
+  display: none;
+}
+
+.animated-data {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Google Sign-In Button Centering */
+.g-signin2 {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.g-signin2:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  border: 3px solid #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: rotate(360deg);
+}
+
+/* User Info Styling */
+.user-info {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff6666;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
